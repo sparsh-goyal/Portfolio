@@ -38,11 +38,13 @@ export default function Experience() {
             >
               {/* Timeline Dot */}
               <div className="absolute -left-[11px] top-0 w-5 h-5 bg-white border-4 border-accent rounded-full" />
-              
+
               <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                   <div>
-                    <h4 className="text-2xl font-bold text-primary">{exp.role}</h4>
+                    <h4 className="text-2xl font-bold text-primary">
+                      {exp.role}
+                    </h4>
                     <div className="flex flex-col gap-1 mt-1">
                       <div className="flex items-center gap-2 text-accent font-semibold">
                         <Briefcase size={16} />
@@ -73,8 +75,14 @@ export default function Experience() {
 
                 <ul className="space-y-4">
                   {exp.highlights.map((highlight, hIdx) => (
-                    <li key={hIdx} className="flex gap-3 text-secondary leading-relaxed">
-                      <CheckCircle2 className="text-accent shrink-0 mt-1" size={18} />
+                    <li
+                      key={hIdx}
+                      className="flex gap-3 text-secondary leading-relaxed"
+                    >
+                      <CheckCircle2
+                        className="text-accent shrink-0 mt-1"
+                        size={18}
+                      />
                       <span>
                         {highlight.split(/(\[.*?\]\(.*?\))/g).map((part, i) => {
                           const match = part.match(/\[(.*?)\]\((.*?)\)/);

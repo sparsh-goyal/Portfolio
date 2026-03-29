@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Linkedin, Github, Twitter, Send, MapPin, Phone } from "lucide-react";
+import { Mail, ExternalLink, Send, MapPin, Phone } from "lucide-react";
 import { CONTACT_INFO } from "../constants";
 
 export default function Contact() {
@@ -52,8 +52,8 @@ export default function Contact() {
 
             <div className="mt-12 flex gap-4">
               {[
-                { icon: Linkedin, href: CONTACT_INFO.linkedin, label: "LinkedIn" },
-                { icon: Github, href: CONTACT_INFO.github, label: "GitHub" },
+                { icon: ExternalLink, href: CONTACT_INFO.linkedin, label: "LinkedIn" },
+                { icon: ExternalLink, href: CONTACT_INFO.github, label: "GitHub" },
               ].map((social) => (
                 <a
                   key={social.label}
