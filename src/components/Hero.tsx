@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { PERSONAL_INFO } from "../constants";
+import profileImage from "../assets/profile2.jpeg";
 
 export default function Hero() {
   return (
@@ -60,10 +60,9 @@ export default function Hero() {
         >
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
             <img
-              src="https://picsum.photos/seed/sparsh/800/1000"
+              src={profileImage}
               alt="Sparsh Goyal"
               className="w-full h-auto object-cover"
-              referrerPolicy="no-referrer"
             />
           </div>
           {/* Decorative elements */}
