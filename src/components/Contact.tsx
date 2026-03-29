@@ -1,8 +1,20 @@
 import { motion } from "motion/react";
+import type { FormEvent } from "react";
 import { Mail, ExternalLink, Send, MapPin, Phone } from "lucide-react";
 import { CONTACT_INFO } from "../constants";
 
 export default function Contact() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const subject = encodeURIComponent(`Contact from ${name || "Website visitor"}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:${CONTACT_INFO.email}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -94,7 +106,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-xl"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold uppercase tracking-wider text-secondary">
@@ -102,6 +114,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                     placeholder="John Doe"
                   />
@@ -112,6 +125,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                     placeholder="john@example.com"
                   />
@@ -122,6 +136,7 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   rows={5}
                   className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none"
                   placeholder="Tell me about your project..."
