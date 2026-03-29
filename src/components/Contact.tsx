@@ -12,9 +12,12 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4">Connect</h2>
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4">
+              Connect
+            </h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Let's build something <span className="text-accent">extraordinary</span> together.
+              Let's build something{" "}
+              <span className="text-accent">extraordinary</span> together.
             </h3>
 
             <div className="space-y-6">
@@ -26,7 +29,9 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">Email Me</div>
+                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">
+                    Email Me
+                  </div>
                   <div className="text-xl font-bold">{CONTACT_INFO.email}</div>
                 </div>
               </a>
@@ -35,7 +40,9 @@ export default function Contact() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">Call Me</div>
+                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">
+                    Call Me
+                  </div>
                   <div className="text-xl font-bold">{CONTACT_INFO.phone}</div>
                 </div>
               </div>
@@ -44,16 +51,28 @@ export default function Contact() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">Location</div>
-                  <div className="text-xl font-bold">{CONTACT_INFO.location}</div>
+                  <div className="text-sm font-bold text-secondary uppercase tracking-wider">
+                    Location
+                  </div>
+                  <div className="text-xl font-bold">
+                    {CONTACT_INFO.location}
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="mt-12 flex gap-4">
               {[
-                { icon: ExternalLink, href: CONTACT_INFO.linkedin, label: "LinkedIn" },
-                { icon: ExternalLink, href: CONTACT_INFO.github, label: "GitHub" },
+                {
+                  icon: ExternalLink,
+                  href: CONTACT_INFO.linkedin,
+                  label: "LinkedIn",
+                },
+                {
+                  icon: ExternalLink,
+                  href: CONTACT_INFO.github,
+                  label: "GitHub",
+                },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -78,7 +97,9 @@ export default function Contact() {
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-secondary">Name</label>
+                  <label className="text-sm font-bold uppercase tracking-wider text-secondary">
+                    Name
+                  </label>
                   <input
                     type="text"
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors"
@@ -86,7 +107,9 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-secondary">Email</label>
+                  <label className="text-sm font-bold uppercase tracking-wider text-secondary">
+                    Email
+                  </label>
                   <input
                     type="email"
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors"
@@ -95,7 +118,9 @@ export default function Contact() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold uppercase tracking-wider text-secondary">Message</label>
+                <label className="text-sm font-bold uppercase tracking-wider text-secondary">
+                  Message
+                </label>
                 <textarea
                   rows={5}
                   className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none"
