@@ -179,6 +179,7 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     company: "Realtor.ca Canada Inc.",
+    companyUrl: "https://realtor.ca",
     role: "Software Engineer",
     period: "Jun 2025 – Present",
     location: "Ottawa, Canada",
@@ -191,6 +192,7 @@ export const EXPERIENCE = [
   },
   {
     company: "The Canadian Real Estate Association",
+    companyUrl: "https://www.crea.ca",
     role: "Web Software Developer",
     period: "Nov 2022 – Jun 2025",
     location: "Ottawa, Canada",
@@ -202,6 +204,7 @@ export const EXPERIENCE = [
   },
   {
     company: "The Canadian Real Estate Association",
+    companyUrl: "https://www.crea.ca",
     role: "QA Test Analyst",
     period: "May 2022 – Nov 2022",
     location: "Ottawa, Canada",
@@ -212,6 +215,7 @@ export const EXPERIENCE = [
   },
   {
     company: "Xoriant Solutions Pvt. Ltd.",
+    companyUrl: "https://www.xoriant.com",
     role: "Associate Software Engineer",
     period: "Jul 2021 – Apr 2022",
     location: "Pune, India",

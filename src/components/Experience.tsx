@@ -46,7 +46,18 @@ export default function Experience() {
                     <div className="flex flex-col gap-1 mt-1">
                       <div className="flex items-center gap-2 text-accent font-semibold">
                         <Briefcase size={16} />
-                        <span>{exp.company}</span>
+                        {exp.companyUrl ? (
+                          <a
+                            href={exp.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          <span>{exp.company}</span>
+                        )}
                       </div>
                       <div className="flex items-center gap-2 text-secondary text-sm">
                         <MapPin size={14} />
