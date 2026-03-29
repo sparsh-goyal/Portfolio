@@ -55,15 +55,16 @@ export const SKILLS = [
     icon: Code2,
     skills: [
       "C#",
+      "Python",
       "TypeScript",
       "JavaScript",
-      "Python",
+      "HTML",
+      "CSS",
       "Java",
       "Kotlin",
       "Go",
       "C++",
-      "HTML",
-      "CSS",
+      "C",
     ],
     description:
       "Versatile in multiple languages for backend, frontend, and systems programming.",
@@ -73,8 +74,8 @@ export const SKILLS = [
     icon: Sparkles,
     skills: [
       "Azure OpenAI",
-      "GPT Models",
       "LLM Integrations",
+      "GitHub Copilot",
       "MCP",
       "RAG",
       "Prompt Engineering",
@@ -97,6 +98,8 @@ export const SKILLS = [
       "Redux",
       "ASP.NET Core",
       ".NET Framework",
+      "Web API",
+      "Dapr",
     ],
     description:
       "Developing responsive web and mobile applications and robust enterprise modules.",
@@ -105,12 +108,10 @@ export const SKILLS = [
     category: "Cloud & DevOps",
     icon: Server,
     skills: [
-      "Microsoft Azure",
-      "Azure DevOps",
+      "Microsoft Azure DevOps",
       "GitHub Actions",
       "Docker",
       "Azure Container Apps",
-      "CI/CD",
     ],
     description:
       "Designing scalable cloud architectures and automated deployment pipelines.",
@@ -118,7 +119,13 @@ export const SKILLS = [
   {
     category: "Databases & Search",
     icon: Database,
-    skills: ["ElasticSearch", "Microsoft SQL Server", "MongoDB", "Firebase"],
+    skills: [
+      "Microsoft SQL Server",
+      "ElasticSearch",
+      "Redis",
+      "MongoDB",
+      "Firebase",
+    ],
     description:
       "Managing diverse data systems and high-performance search engines.",
   },
