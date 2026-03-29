@@ -10,8 +10,12 @@ export default function Contact() {
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
-    const subject = encodeURIComponent(`Contact from ${name || "Website visitor"}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const subject = encodeURIComponent(
+      `Contact from ${name || "Website visitor"}`,
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`,
+    );
     window.location.href = `mailto:${CONTACT_INFO.email}?subject=${subject}&body=${body}`;
   };
 

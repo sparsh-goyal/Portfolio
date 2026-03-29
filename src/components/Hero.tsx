@@ -4,7 +4,10 @@ import profileImage from "../assets/profile2.jpeg";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-accent/5 to-transparent" />
       <div className="absolute -top-24 -right-24 -z-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -20,11 +23,12 @@ export default function Hero() {
             <Sparkles size={14} />
             <span>Software Engineer & AI Specialist</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 tracking-tight">
-            Building <span className="text-accent">intelligent</span> systems for large-scale impact
+            Building <span className="text-accent">intelligent</span> systems
+            for large-scale impact
           </h1>
-          
+
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#projects"
@@ -42,7 +46,9 @@ export default function Hero() {
           </div>
 
           <div className="mt-16 flex items-center gap-8 grayscale opacity-50">
-            <div className="text-sm font-bold uppercase tracking-widest text-secondary">Expertise in</div>
+            <div className="text-sm font-bold uppercase tracking-widest text-secondary">
+              Expertise in
+            </div>
             <div className="flex gap-6 font-bold text-xl">
               <span>GenAI</span>
               <span>Azure</span>
