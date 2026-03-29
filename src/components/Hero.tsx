@@ -29,17 +29,17 @@ export default function Hero() {
             for large-scale impact
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch">
             <a
               href="#projects"
-              className="group flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+              className="group flex w-full sm:w-auto items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
             >
               View My Work
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#contact"
-              className="flex items-center justify-center px-8 py-4 rounded-full font-bold text-lg border-2 border-primary/10 hover:border-accent hover:text-accent transition-all"
+              className="flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-full font-bold text-lg border-2 border-primary/10 hover:border-accent hover:text-accent transition-all"
             >
               Get in Touch
             </a>
