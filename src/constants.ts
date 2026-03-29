@@ -228,13 +228,41 @@ export const EXPERIENCE = [
 ];
 
 export const ACHIEVEMENTS = [
-  "Sponsor Category Winner – HackTheHill",
-  "Sponsor Category Winner – uOttaHack5",
-  "1st Runner Up – One-Hack-Athon (Global Hackathon)",
-  "Innovative Implementable Idea Award – Samhar COVID-19 Hackathon",
-  "Grand Prize Winner – Decov2020 Hackathon",
-  "1st Runner Up – Festival of Future Hackathon",
-  "All India Rank 6 – NESD Exam 2019",
+  {
+    title: "Sponsor Category Winner – HackTheHill",
+    image: "/assets/awards/hackTheHill.jpg",
+    alt: "HackTheHill felicitation",
+  },
+  {
+    title: "Sponsor Category Winner – uOttaHack5",
+    image: "/assets/awards/uOttaHack.jpg",
+    alt: "uOttaHack5 felicitation",
+  },
+  {
+    title: "1st Runner Up – One-Hack-Athon (Global Hackathon)",
+    image: "/assets/awards/oneHack.jpeg",
+    alt: "One-Hack-Athon felicitation",
+  },
+  {
+    title: "Innovative Implementable Idea Award – Samhar COVID-19 Hackathon",
+    image: "/assets/awards/samhar.PNG",
+    alt: "Samhar COVID-19 Hackathon Product Screenshot",
+  },
+  {
+    title: "Grand Prize Winner – Decov2020 Hackathon",
+    image: "/assets/awards/decov.jpeg",
+    alt: "Decov2020 felicitation",
+  },
+  {
+    title: "1st Runner Up – Festival of Future Hackathon",
+    image: "/assets/awards/fof.png",
+    alt: "Festival of Future Hackathon felicitation",
+  },
+  {
+    title: "All India Rank 6 – NESD Exam 2019",
+    image: "/assets/awards/trophy-badge.svg",
+    alt: "NESD exam trophy badge",
+  },
 ];
 
 export const CONTACT_INFO = {

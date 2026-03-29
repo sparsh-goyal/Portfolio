@@ -29,17 +29,21 @@ export default function Achievements() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ACHIEVEMENTS.map((achievement, idx) => (
             <motion.div
-              key={achievement}
+              key={achievement.title}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-accent/30 transition-all group"
+              className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-accent/30 transition-all group"
             >
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-accent shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
-                <Trophy size={20} />
+              <div className="mb-5 overflow-hidden rounded-3xl bg-white shadow-sm h-48 flex items-center justify-center">
+                <img
+                  src={achievement.image ?? "/assets/awards/trophy-badge.svg"}
+                  alt={achievement.alt ?? achievement.title}
+                  className="w-full h-full object-contain p-4"
+                />
               </div>
-              <p className="font-bold text-primary">{achievement}</p>
+              <p className="font-bold text-primary">{achievement.title}</p>
             </motion.div>
           ))}
         </div>
