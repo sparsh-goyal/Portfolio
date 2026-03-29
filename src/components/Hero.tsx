@@ -29,10 +29,10 @@ export default function Hero() {
             for large-scale impact
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-stretch">
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch min-w-0">
             <a
               href="#projects"
-              className="group flex w-full sm:w-auto items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+              className="group flex w-full sm:w-auto min-w-0 items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-accent transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
             >
               View My Work
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -45,11 +45,11 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-16 flex items-center gap-8 grayscale opacity-50">
+          <div className="mt-16 flex flex-wrap items-center gap-4 grayscale opacity-50">
             <div className="text-sm font-bold uppercase tracking-widest text-secondary">
               Expertise in
             </div>
-            <div className="flex gap-6 font-bold text-xl">
+            <div className="flex flex-wrap gap-4 font-bold text-xl">
               <span>GenAI</span>
               <span>Azure</span>
               <span>React</span>
