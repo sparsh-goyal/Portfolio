@@ -1,7 +1,23 @@
 import { motion } from "motion/react";
-import type { FormEvent } from "react";
-import { Mail, ExternalLink, Send, MapPin, Phone } from "lucide-react";
+import type { FormEvent, SVGProps } from "react";
+import { Mail, Send, MapPin, Phone } from "lucide-react";
 import { CONTACT_INFO } from "../constants";
+
+function GitHubIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.335-5.466-5.93 0-1.31.47-2.38 1.235-3.22-.125-.305-.535-1.53.115-3.185 0 0 1.005-.32 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.55 3.285-1.23 3.285-1.23.655 1.655.245 2.88.12 3.185.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.37.81 1.1.81 2.22 0 1.605-.015 2.9-.015 3.295 0 .32.21.695.825.577C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0zM7.119 20.452H3.554V9h3.565v11.452zM5.337 7.433c-1.1 0-1.994-.896-1.994-1.999 0-1.102.894-1.999 1.994-1.999 1.101 0 1.995.897 1.995 1.999 0 1.103-.894 1.999-1.995 1.999zM20.447 20.452h-3.554v-5.568c0-1.328-.028-3.037-1.849-3.037-1.85 0-2.133 1.444-2.133 2.936v5.669h-3.565V9h3.416v1.561h.049c.476-.9 1.637-1.849 3.37-1.849 3.602 0 4.267 2.371 4.267 5.455v6.285z" />
+    </svg>
+  );
+}
 
 export default function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -80,12 +96,12 @@ export default function Contact() {
             <div className="mt-12 flex gap-4">
               {[
                 {
-                  icon: ExternalLink,
+                  icon: LinkedInIcon,
                   href: CONTACT_INFO.linkedin,
                   label: "LinkedIn",
                 },
                 {
-                  icon: ExternalLink,
+                  icon: GitHubIcon,
                   href: CONTACT_INFO.github,
                   label: "GitHub",
                 },
@@ -95,10 +111,10 @@ export default function Contact() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center hover:border-accent hover:text-accent transition-all hover:-translate-y-1 shadow-sm"
+                  className="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-primary hover:border-accent hover:text-accent transition-all hover:-translate-y-1 shadow-sm"
                   aria-label={social.label}
                 >
-                  <social.icon size={20} />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
