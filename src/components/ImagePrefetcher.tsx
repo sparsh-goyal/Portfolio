@@ -6,7 +6,9 @@ const profileImage = new URL("../assets/profile2.jpeg", import.meta.url).href;
 const imageSources = [
   profileImage,
   ...PROJECTS.map((project) => project.image),
-  ...ACHIEVEMENTS.map((achievement) => achievement.image ?? "/assets/awards/trophy-badge.svg"),
+  ...ACHIEVEMENTS.map(
+    (achievement) => achievement.image ?? "/assets/awards/trophy-badge.svg",
+  ),
 ];
 
 export default function ImagePrefetcher() {

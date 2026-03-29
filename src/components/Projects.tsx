@@ -4,7 +4,10 @@ import { PROJECTS } from "../constants";
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-primary text-white overflow-hidden">
+    <section
+      id="projects"
+      className="section-padding bg-primary text-white overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6 text-center md:text-left">
           <div>
@@ -32,7 +35,8 @@ export default function Projects() {
             viewport={{ once: true }}
             className="text-secondary max-w-md text-lg"
           >
-            A selection of projects where I've combined technical architecture with AI and modern frameworks to deliver measurable impact.
+            A selection of projects where I've combined technical architecture
+            with AI and modern frameworks to deliver measurable impact.
           </motion.p>
         </div>
 
@@ -53,14 +57,18 @@ export default function Projects() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${project.title}/800/600`;
+                    (e.target as HTMLImageElement).src =
+                      `https://picsum.photos/seed/${project.title}/800/600`;
                   }}
                 />
               </div>
               <div className="p-8">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t) => (
-                    <span key={t} className="text-[10px] font-bold uppercase tracking-widest text-accent">
+                    <span
+                      key={t}
+                      className="text-[10px] font-bold uppercase tracking-widest text-accent"
+                    >
                       {t}
                     </span>
                   ))}
@@ -68,11 +76,19 @@ export default function Projects() {
                 <h4 className="text-2xl font-bold mb-4 flex items-center justify-between">
                   {project.title}
                   {project.link ? (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:scale-110 transition-transform">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:scale-110 transition-transform"
+                    >
                       <ArrowUpRight size={20} />
                     </a>
                   ) : (
-                    <ArrowUpRight size={20} className="text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight
+                      size={20}
+                      className="text-accent opacity-0 group-hover:opacity-100 transition-opacity"
+                    />
                   )}
                 </h4>
                 <p className="text-gray-400 text-sm leading-relaxed">
